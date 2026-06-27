@@ -1,0 +1,23 @@
+# =============================================================================
+# WauditBox v2.0 — configs/ufw.rules
+# Reference — applied by 03-firewall-network.sh
+# =============================================================================
+# Policy: default deny incoming, default allow outgoing
+
+# Allow Dropbear (pre-boot LUKS unlock)
+# ufw allow 22222/tcp comment 'Dropbear initramfs'
+
+# Allow SSH (post-boot management)
+# ufw allow 2222/tcp comment 'WauditBox SSH'
+
+# Allow WireGuard VPN
+# ufw allow 51820/udp comment 'WireGuard VPN'
+
+# Allow loopback
+# ufw allow in on lo
+# ufw deny in from any to 127.0.0.0/8
+
+# Block everything else
+# ufw default deny incoming
+# ufw default allow outgoing
+# ufw default deny forward
