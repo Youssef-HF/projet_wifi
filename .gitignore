@@ -1,0 +1,66 @@
+# =============================================================================
+# WauditBox v2.0 — .gitignore
+# CRITICAL: These files must NEVER be committed
+# =============================================================================
+
+# --- Private keys (NEVER commit) ---
+*.key
+*.pem
+*.p12
+*.pfx
+*_private*
+*private_key*
+/etc/wireguard/
+configs/wg-client-LIVE.conf
+configs/server-registration.txt
+
+# --- Pentest results (sensitive data) ---
+results/handshakes/*.cap
+results/handshakes/*.hccapx
+results/handshakes/*.22000
+results/pmkids/
+results/captures/*.pcap
+results/captures/*.pcapng
+results/rfid/*.rfid
+results/subghz/*.sub
+results/scans/*.txt
+results/reports/*.pdf
+
+# --- Databases (may contain credentials) ---
+*.db
+*.sqlite
+*.sqlite3
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# --- Editor artifacts ---
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# --- Keep empty result directories ---
+!results/handshakes/.gitkeep
+!results/pmkids/.gitkeep
+!results/scans/.gitkeep
+!results/rfid/.gitkeep
+!results/captures/.gitkeep
+!results/reports/.gitkeep
+!logs/.gitkeep
