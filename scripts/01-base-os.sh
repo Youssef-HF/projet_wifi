@@ -7,9 +7,9 @@
 #   - Update system packages
 #   - Install all required tools (aircrack, hcxdumptool, ModemManager, etc.)
 #   - Set hostname to "wauditbox"
-#   - Disable LEDs, HDMI, Bluetooth (headless/discreet operation)
+#   - Disable LEDs, HDMI  (headless/discreet operation)
 #   - Kernel parameter tuning (BBR congestion, IPv6 disable, security)
-#   - SSH hardening (Ed25519 only, port 2222, no passwords)
+#   - SSH hardening (Ed25519 only, port 2229, no passwords)
 #   - USB storage blocking + whitelist for Flipper/ESP32/5G modem
 #   - NetworkManager configuration (monitor mode support)
 #   - AppArmor enforcement
@@ -21,7 +21,7 @@
 #
 # Run on: Freshly booted Kali Linux ARM64 (RPi5)
 # Requirements: Root access, internet connection
-# Reboot required: YES (to apply LED/HDMI/USB/kernel changes)
+# Reboot required: YES (to apply LED/HDMI/USB/kernel changes)  
 #
 # Author: WauditBox Team
 # Version: 2.0
