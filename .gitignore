@@ -1,4 +1,4 @@
-# =============================================================================
+# ===============================x==============================================
 # WauditBox v2.0 — .gitignore
 # CRITICAL: These files must NEVER be committed
 # =============================================================================
@@ -64,3 +64,4 @@ build/
 !results/captures/.gitkeep
 !results/reports/.gitkeep
 !logs/.gitkeep
+attacks/wifi_crack/dictionary.txt

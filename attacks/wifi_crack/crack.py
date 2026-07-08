@@ -81,7 +81,7 @@ def check_injection(mon_iface, bssid):
     print("[*] Testing packet injection...")
     result = subprocess.run(
         ["aireplay-ng", "--test", "-b", bssid, mon_iface],
-        capture_output=True, text=True, timeout=40
+        capture_output=True, text=True, timeout=15
     )
     output = result.stdout + result.stderr
     if "Injection is working" in output or "injecting" in output.lower():
@@ -685,13 +685,13 @@ def gather_context():
         raw = input(f"  {prompt}: ").strip()
         return [w.strip() for w in raw.split(",") if w.strip()] if raw else []
 
-    place  = ask("Place / business name  (ex: TC, TechCenter)")
-    city   = ask("City / neighbourhood   (ex: Alger, Oran)")
-    street = ask("Street / area          (ex: Didouche, Riadh)")
-    phone  = ask("Phone / last 4 digits  (ex: 0550, 1234)")
-    owner  = ask("Admin / manager name   (ex: Karim, Fatima)")
-    extra  = ask("Other keywords         (ex: 2024, student, tc)")
-    ssid   = input("\n  SSID (network name)   : ").strip()
+    place  = ask("Place / business name")
+    city   = ask("City / neighbourhood")
+    street = ask("Street / area ")
+    phone  = ask("Phone / last 4 digits")
+    owner  = ask("Admin / manager name")
+    extra  = ask("Other keywords")
+    ssid   = input("\n  SSID (network name) : ").strip()
 
     all_words = []
     for g in [place, city, street, phone, owner, extra]:
