@@ -1,0 +1,1 @@
+attacks/wifi_crack/dictionary.txt filter=lfs diff=lfs merge=lfs -text
