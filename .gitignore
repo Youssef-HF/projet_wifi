@@ -65,3 +65,4 @@ build/
 !results/reports/.gitkeep
 !logs/.gitkeep
 attacks/wifi_crack/dictionary.txt
+.pio/
